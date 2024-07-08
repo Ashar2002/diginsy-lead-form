@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <section class="form-section bg-props d-none">
+    <section class="form-section bg-props" id="initial-step">
         <div class="container custom-container-lg">
             <div class="row">
                 <div class="col-md-3">
@@ -24,7 +24,7 @@
                         <img src="./assets/images/logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-xl-7 col-lg-9">
                     <div class="step-form-wrap">
                         <h1 class="form-title">Business Information</h1>
                         <form action="">
@@ -63,20 +63,20 @@
                                         <label for="" class="label-field pb-22">Services Interested In <span class="star">*</span></label>
                                         <div class="d-flex align-items-center flex-wrap checkbox-flex">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label label-field" for="flexCheckDefault">
+                                                <input class="form-check-input" type="checkbox" id="LogoCheck" name="option1" value="LogoCheck">
+                                                <label class="form-check-label label-field" for="LogoCheck">
                                                     Logo Design
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                                                <label class="form-check-label label-field" for="flexCheckDefault2">
+                                                <input class="form-check-input" type="checkbox" id="WebCheck" name="option2" value="WebCheck">
+                                                <label class="form-check-label label-field" for="WebCheck">
                                                     Website Design
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-                                                <label class="form-check-label label-field" for="flexCheckDefault3">
+                                                <input class="form-check-input" type="checkbox" id="BrandCheck" name="option3" value="BrandCheck">
+                                                <label class="form-check-label label-field" for="BrandCheck">
                                                     Branding
                                                 </label>
                                             </div>
@@ -141,7 +141,7 @@
             </div>
         </div>
     </section>
-    <section class="form-section bg-props d-none">
+    <section class="form-section bg-props d-none" id="Logo-step">
         <div class="container custom-container-lg">
             <div class="row">
                 <div class="col-md-3">
@@ -149,7 +149,7 @@
                         <img src="./assets/images/logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-xl-7 col-lg-9">
                     <div class="step-form-wrap">
                         <h1 class="form-title">Project Brief Form</h1>
                         <form action="">
@@ -344,7 +344,7 @@
             </div>
         </div>
     </section>
-    <section class="form-section bg-props d-none">
+    <section class="form-section bg-props d-none" id="Web-step">
         <div class="container custom-container-lg">
             <div class="row">
                 <div class="col-md-3">
@@ -352,7 +352,7 @@
                         <img src="./assets/images/logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-xl-7 col-lg-9">
                     <div class="step-form-wrap">
                         <h1 class="form-title">Project Brief Form</h1>
                         <form action="">
@@ -458,7 +458,7 @@
             </div>
         </div>
     </section>
-    <section class="form-section bg-props d-block">
+    <section class="form-section bg-props d-none" id="LogoWeb-step">
         <div class="container custom-container-lg">
             <div class="row">
                 <div class="col-md-3">
@@ -466,7 +466,7 @@
                         <img src="./assets/images/logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-xl-7 col-lg-9">
                     <div class="step-form-wrap">
                         <h1 class="form-title">Project Brief Form</h1>
                         <form action="">
@@ -720,9 +720,75 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/cleave.min.js"></script>
-    <script src="./assets/js/custom.js"></script>
+    <section class="thankyou d-none">
+        <h1 class="display-4 text-center fw-bold">thank you</h1>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialForm = document.querySelector('#initial-step form');
+            const initialStep = document.getElementById('initial-step');
+            const logoStep = document.getElementById('Logo-step');
+            const webStep = document.getElementById('Web-step');
+            const logoWebStep = document.getElementById('LogoWeb-step');
+            const thankYouSection = document.querySelector('.thankyou');
+
+            const steps = [];
+            let currentStepIndex = 0;
+
+            initialForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                steps.length = 0;
+
+                const isLogoChecked = document.getElementById('LogoCheck').checked;
+                const isWebChecked = document.getElementById('WebCheck').checked;
+                const isBrandChecked = document.getElementById('BrandCheck').checked;
+
+                if (isLogoChecked && isWebChecked) {
+                    steps.push(logoWebStep);
+                } else {
+                    if (isLogoChecked) {
+                        steps.push(logoStep);
+                    }
+                    if (isWebChecked) {
+                        steps.push(webStep);
+                    }
+                }
+
+                if (isBrandChecked) {
+                    steps.push(brandStep);
+                }
+
+                if (steps.length > 0) {
+                    initialStep.classList.add('d-none');
+                    showStep(0);
+                }
+            });
+
+            function showStep(index) {
+                if (index < steps.length) {
+                    steps[index].classList.remove('d-none');
+                    steps[index].querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        steps[index].classList.add('d-none');
+                        showStep(index + 1);
+                    });
+                    steps[index].querySelector('.prev-step').addEventListener('click', function() {
+                        steps[index].classList.add('d-none');
+                        showStep(index - 1);
+                    });
+                } else {
+                    thankYouSection.classList.remove('d-none');
+                    // Uncomment the next line to redirect to a thank you page instead of showing the thank you section
+                    // window.location.href = 'thankyou.html';
+                }
+            }
+        });
+    </script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/cleave.min.js"></script>
+<script src="./assets/js/custom.js"></script>
 
 </html>
