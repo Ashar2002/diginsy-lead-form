@@ -16,6 +16,30 @@ const fileUpload = (event, imageId, iconId) => {
     }
 };
 
+// Function to add event listeners if the elements are present
+const addFileUploadListeners = () => {
+    const uploadInput1 = document.querySelector("#tb-file-upload");
+    const uploadInput2 = document.querySelector("#tb-file-upload-2");
+    const uploadInput3 = document.querySelector("#tb-file-upload-3");
+
+    if (uploadInput1) {
+        uploadInput1.addEventListener("change", (event) =>
+            fileUpload(event, "tb-image", "tb-icon")
+        );
+    }
+
+    if (uploadInput2) {
+        uploadInput2.addEventListener("change", (event) =>
+            fileUpload(event, "tb-image-2", "tb-icon-2")
+        );
+    }
+    if (uploadInput3) {
+        uploadInput3.addEventListener("change", (event) =>
+            fileUpload(event, "tb-image-3", "tb-icon-3")
+        );
+    }
+};
+
 // validation 
 var alphaFields = document.getElementsByClassName("only-alpha");
 for (var i = 0; i < alphaFields.length; i++) {
@@ -39,3 +63,6 @@ phoneInputs.forEach(function(input) {
     numericOnly: true
   });
 });
+
+
+
