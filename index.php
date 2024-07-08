@@ -30,24 +30,24 @@
                             <div class="form-inner-content">
                                 <div class="row">
                                     <div class="col-md-6 field-wrap">
-                                        <label for="" class="label-field">Business Title <span class="star">*</span></label>
-                                        <input type="text" class="input-field" placeholder="Business Title">
+                                        <label class="label-field" for="BusinessTitle">Business Title <span class="star">*</span></label>
+                                        <input type="text" class="input-field only-alpha" id="BusinessTitle" name="BusinessTitle" placeholder="Business Title">
                                     </div>
                                     <div class="col-md-6 field-wrap">
-                                        <label for="" class="label-field">Service Industry <span class="star">*</span></label>
-                                        <input type="text" class="input-field" placeholder="Write Industry">
+                                        <label for="ServiceIndustry" class="label-field">Service Industry <span class="star">*</span></label>
+                                        <input type="text" id="ServiceIndustry" name="ServiceIndustry" class="input-field only-alpha" placeholder="Write Industry">
                                     </div>
                                     <div class="col-md-12 field-wrap">
                                         <div class="d-flex align-items-center">
                                             <label for="" class="label-field pr-15 pb-0">Business Type <span class="star">*</span></label>
                                             <div class="form-check pr-15">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                                <label class="form-check-label e-light-gray label-field pb-0" for="flexRadioDefault2">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label e-light-gray label-field pb-0" for="flexRadioDefault1">
                                                     Existing Business
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                                                 <label class="form-check-label e-light-gray label-field pb-0" for="flexRadioDefault2">
                                                     New Startup
                                                 </label>
@@ -55,8 +55,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12 field-wrap">
-                                        <label for="" class="label-field">Define Your Business <span class="star">*</span></label>
-                                        <textarea name="" class="input-field textarea" id="" placeholder="Define Your Business"></textarea>
+                                        <label for="textarea" class="label-field">Define Your Business <span class="star">*</span></label>
+                                        <textarea name="textarea" class="input-field textarea" id="textarea" placeholder="Define Your Business"></textarea>
                                     </div>
                                     <div class="col-md-12 field-wrap">
                                         <label for="" class="label-field pb-22">Services Interested In <span class="star">*</span></label>
@@ -68,66 +68,66 @@
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                                <label class="form-check-label label-field" for="flexCheckDefault2">
                                                     Website Design
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                                <label class="form-check-label label-field" for="flexCheckDefault3">
                                                     Branding
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                                                <label class="form-check-label label-field" for="flexCheckDefault4">
                                                     Social Media Marketing
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                                                <label class="form-check-label label-field" for="flexCheckDefault5">
                                                     SEO
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+                                                <label class="form-check-label label-field" for="flexCheckDefault6">
                                                     Digital Advertising
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                                                <label class="form-check-label label-field" for="flexCheckDefault7">
                                                     Video Animation
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
+                                                <label class="form-check-label label-field" for="flexCheckDefault8">
                                                     Mobile Application
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label label-field" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
+                                                <label class="form-check-label label-field" for="flexCheckDefault9">
                                                     CRM
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 field-wrap">
-                                        <label for="" class="label-field">Business Contact Person <span class="star">*</span></label>
-                                        <input type="text" class="input-field" placeholder="Business Contact Person">
+                                        <label for="BusinessContactPerson" class="label-field">Business Contact Person <span class="star">*</span></label>
+                                        <input type="text" id="BusinessContactPerson" name="BusinessContactPerson" class="input-field phone-number" placeholder="Business Contact Person">
                                     </div>
                                     <div class="col-md-6 field-wrap">
-                                        <label for="" class="label-field">Business Phone <span class="star">*</span></label>
-                                        <input type="text" class="input-field" placeholder="Business Phone">
+                                        <label for="BusinessPhone" class="label-field">Business Phone <span class="star">*</span></label>
+                                        <input type="text" id="BusinessPhone" name="BusinessPhone" class="input-field phone-number" placeholder="Business Phone">
                                     </div>
                                     <div class="col-md-6 field-wrap">
-                                        <label for="" class="label-field">Business Email <span class="star">*</span></label>
-                                        <input type="text" class="input-field" placeholder="Business Email">
+                                        <label for="BusinessEmail" class="label-field">Business Email <span class="star">*</span></label>
+                                        <input type="email" id="BusinessEmail" name="BusinessEmail" class="input-field" placeholder="Business Email" required>
                                     </div>
                                     <div class="col-md-12 d-flex justify-content-center">
                                         <button class="btn primary-btn">Submit</button>
@@ -141,6 +141,8 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/cleave.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
 </body>
 
 </html>

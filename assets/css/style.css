@@ -218,6 +218,9 @@ a {
     padding: 19px 14px;
     font-size: 14px;
 }
+.input-field:focus {
+    border: 1px solid var(--primary-theme);
+}
 .input-field::placeholder {
     color: #8F8F8F;
 }
@@ -282,6 +285,7 @@ a {
 .primary-btn {
     background-color: var(--primary-theme);
 }
+
 @media(width >= 1560px) {
     .custom-container-lg {
         max-width: 1600px ;
