@@ -6886,6 +6886,9 @@
 .mid-gray {
   color: var(--mid-gray);
 }
+.e-light-gray {
+  color: var(--extra-light-gray);
+}
 
 /* colors end */
 /* font-family */
