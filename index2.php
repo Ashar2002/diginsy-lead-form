@@ -81,6 +81,68 @@
         <h1 class="display-4 text-center fw-bold">thank you</h1>
     </section>
 </body>
+<!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialForm = document.querySelector('#initial-step form');
+            const initialStep = document.getElementById('initial-step');
+            const logoStep = document.getElementById('Logo-step');
+            const webStep = document.getElementById('Web-step');
+            const logoWebStep = document.getElementById('LogoWeb-step');
+            const thankYouSection = document.querySelector('.thankyou');
+
+            const steps = [];
+            let currentStepIndex = 0;
+
+            initialForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                steps.length = 0;
+
+                const isLogoChecked = document.getElementById('LogoCheck').checked;
+                const isWebChecked = document.getElementById('WebCheck').checked;
+                const isBrandChecked = document.getElementById('BrandCheck').checked;
+
+                if (isLogoChecked && isWebChecked) {
+                    steps.push(logoWebStep);
+                } else {
+                    if (isLogoChecked) {
+                        steps.push(logoStep);
+                    }
+                    if (isWebChecked) {
+                        steps.push(webStep);
+                    }
+                }
+
+                if (isBrandChecked) {
+                    steps.push(brandStep);
+                }
+
+                if (steps.length > 0) {
+                    initialStep.classList.add('d-none');
+                    showStep(0);
+                }
+            });
+
+            function showStep(index) {
+                if (index < steps.length) {
+                    steps[index].classList.remove('d-none');
+                    steps[index].querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        steps[index].classList.add('d-none');
+                        showStep(index + 1);
+                    });
+                    // steps[index].querySelector('.prev-step').addEventListener('click', function() {
+                    //     steps[index].classList.add('d-none');
+                    //     showStep(index - 1);
+                    // });
+                } else {
+                    thankYouSection.classList.remove('d-none');
+                    // Uncomment the next line to redirect to a thank you page instead of showing the thank you section
+                    // window.location.href = 'thankyou.html';
+                }
+            }
+        });
+    </script> -->
+
 <script src="./assets/js/custom-steps.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

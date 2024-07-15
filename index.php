@@ -14,6 +14,24 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/utilities.css">
 </head>
+<style>
+    .error-input {
+        color: red;
+        font-size: 13px;
+        padding-left: 10px;
+        font-weight: 600;
+    }
+
+    .input-field.error-input {
+        border: 1px solid red;
+        font-size: 14px;
+        font-weight: 400 !important;
+    }
+
+    .input-field::placeholder {
+        font-size: 14px !important;
+    }
+</style>
 
 <body>
     <main class="form-section bg-props">
@@ -626,13 +644,13 @@
                                             <div class="d-flex justify-content-between align-items-center input-toggle">
                                                 <label for="" class="label-field  fw-500 pr-15 pb-0">Website</label>
                                                 <div class="form-check pr-15">
-                                                <input class="form-check-input new" type="radio" name="flexRadioDefault" id="new2" checked>
-                                                <label class="form-check-label e-light-gray label-field pb-0" for="new2">New</label>
-                                            </div>
-                                            <div class="form-check pr-15">
-                                                <input class="form-check-input revamp" type="radio" name="flexRadioDefault" id="Revamp2">
-                                                <label class="form-check-label e-light-gray label-field pb-0" for="Revamp2">Revamp</label>
-                                            </div>
+                                                    <input class="form-check-input new" type="radio" name="flexRadioDefault" id="new2" checked>
+                                                    <label class="form-check-label e-light-gray label-field pb-0" for="new2">New</label>
+                                                </div>
+                                                <div class="form-check pr-15">
+                                                    <input class="form-check-input revamp" type="radio" name="flexRadioDefault" id="Revamp2">
+                                                    <label class="form-check-label e-light-gray label-field pb-0" for="Revamp2">Revamp</label>
+                                                </div>
                                             </div>
                                             <input type="text" class="input-field websiteInput2" placeholder="Existing Website">
                                         </div>
@@ -681,13 +699,156 @@
             </div>
         </div>
     </main>
-    <script>
-        
-    </script>
-
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/cleave.min.js"></script>
 <script src="./assets/js/custom.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const initialForm = $("#initial-step form");
+        const initialStep = $("#initial-step");
+        const logoStep = $("#Logo-step");
+        const webStep = $("#Web-step");
+        const logoWebStep = $("#LogoWeb-step");
+        const thankYouSection = $(".thankyou");
+
+        const steps = [];
+        let currentStepIndex = 0;
+
+        // Add custom validation method
+        $.validator.addMethod("phoneUS", function(phone_number, element) {
+            return this.optional(element) || /^\(\d{3}\) \d{3}-\d{4}$/.test(phone_number);
+        }, "Please enter a valid phone number in the format (123) 123-1231.");
+
+        initialForm.validate({
+            rules: {
+                BusinessTitle: {
+                    required: false
+                },
+                ServiceIndustry: {
+                    required: false
+                },
+                flexRadioDefault: {
+                    required: false
+                },
+                textarea: {
+                    required: false
+                },
+                BusinessContactPerson: {
+                    required: false,
+                    phoneUS: true
+                },
+                BusinessPhone: {
+                    required: false,
+                    phoneUS: true
+                },
+                BusinessEmail: {
+                    required: false,
+                    email: true
+                },
+                "option1": {
+                    required: function(element) {
+                        return $("#initial-step .form-check-input:checked").length == 0;
+                    }
+                }
+            },
+            messages: {
+                BusinessTitle: {
+                    required: "Please enter the business title."
+                },
+                ServiceIndustry: {
+                    required: "Please enter the service industry."
+                },
+                flexRadioDefault: {
+                    required: "Please select a business type."
+                },
+                textarea: {
+                    required: "Please define your business."
+                },
+                BusinessContactPerson: {
+                    required: "Please enter the contact person."
+                },
+                BusinessPhone: {
+                    required: "Please enter the business phone.",
+                    phoneUS: "Please enter a valid phone number in the format (123) 123-1231."
+                },
+                BusinessEmail: {
+                    required: "Please enter the business email.",
+                    email: "Please enter a valid email address."
+                },
+                "option1": {
+                    required: "Please select at least one service."
+                }
+            },
+            errorClass: "error-input",
+            errorElement: "div",
+            errorPlacement: function(error, element) {
+                if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
+                    error.insertAfter(element.closest('.field-wrap'));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            highlight: function(element) {
+                $(element).addClass('error-border');
+            },
+            unhighlight: function(element) {
+                $(element).removeClass('error-border');
+            },
+            submitHandler: function(form) {
+                steps.length = 0;
+
+                const isLogoChecked = $("#LogoCheck").is(":checked");
+                const isWebChecked = $("#WebCheck").is(":checked");
+                // const isBrandChecked = $("#BrandCheck").is(":checked");
+
+                if (isLogoChecked && isWebChecked) {
+                    steps.push(logoWebStep);
+                } else {
+                    if (isLogoChecked) {
+                        steps.push(logoStep);
+                    }
+                    if (isWebChecked) {
+                        steps.push(webStep);
+                    }
+                }
+
+                // if (isBrandChecked) {
+                //     steps.push($("#Brand-step"));
+                // }
+
+                if (steps.length > 0) {
+                    initialStep.addClass("d-none");
+                    showStep(0);
+                }
+            }
+        });
+
+        function showStep(index) {
+            if (index < steps.length) {
+                steps[index].removeClass("d-none");
+                steps[index].find("form").validate({
+                    highlight: function(element) {
+                        $(element).addClass('error-border');
+                    },
+                    unhighlight: function(element) {
+                        $(element).removeClass('error-border');
+                    },
+                    submitHandler: function(form) {
+                        steps[index].addClass("d-none");
+                        showStep(index + 1);
+                    }
+                });
+            } else {
+                thankYouSection.removeClass("d-none");
+                // Uncomment the next line to redirect to a thank you page instead of showing the thank you section
+                // window.location.href = 'thankyou.html';
+            }
+        }
+    });
+</script>
 
 </html>
