@@ -960,7 +960,7 @@
                     // Hide current step and move to the determined step
                     currentStep.classList.add('d-none');
                 }
-            } else if (currentStep.id === 'logo-step') {
+            } else if (currentStep.id === 'Logo-step') {
                 if (validateLogoStep()) {
                     currentStep.classList.add('d-none');
                     if (document.getElementById('Web-step').classList.contains('d-none')) {
