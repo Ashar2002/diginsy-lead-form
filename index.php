@@ -376,7 +376,7 @@
                                     <div class="row">
                                         <div class="col-md-12 field-wrap">
                                             <label for="" class="label-field pb-0 mb-20">Type Of Website  *</label>
-                                            <div class="d-flex align-items-center justify-content-between cat-wrap">
+                                            <div class="type-of-site-web-step d-flex align-items-center justify-content-between cat-wrap">
                                                 <div class="form-check pr-15">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="webtype">
                                                     <label class="form-check-label e-light-gray label-field pb-0" for="webtype">
@@ -414,6 +414,8 @@
                                                     </label>
                                                 </div>
                                             </div>
+                                            <span class="error-line">Enter Type Of Website</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex justify-content-between align-items-sm-center flex-sm-row flex-column cat-wrap">
@@ -436,12 +438,16 @@
                                             <input type="text" id="ColorPreference2" name="ColorPreference" class="input-field" placeholder="Color Preference (Optional)">
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Ideas_Inspiration" class="label-field">Ideas &amp; Inspiration <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration" placeholder="Share if any reference in mind"></textarea>
+                                            <label for="Ideas_InspirationWeb" class="label-field">Ideas &amp; <span class="star">*</span></label>
+                                            <textarea name="Ideas_InspirationWeb" class="input-field textarea h-md only-alpha" id="Ideas_InspirationWeb" placeholder="Share if any reference in mind"></textarea>
+                                            <span class="error-line">Enter Ideas & Inspiration</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Comments_instructions" class="label-field">Comments / Instructions <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-120" id="Comments_instructions" placeholder="Comments or any instructions"></textarea>
+                                            <label for="Comments_instructionsWeb" class="label-field">Comments / Instructions <span class="star">*</span></label>
+                                            <textarea name="Comments_instructionsWeb" class="input-field textarea h-120" id="Comments_instructionsWeb" placeholder="Comments or any instructions"></textarea>
+                                            <span class="error-line">Enter Comments / Instructions</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex align-items-center justify-content-between mb-6 flex-wrap ">
@@ -474,8 +480,8 @@
                                 <div class="form-inner-content">
                                     <div class="row">
                                         <div class="col-md-6 field-wrap">
-                                            <label class="label-field" for="TextOnLogo">Text On Logo <span class="star">*</span></label>
-                                            <input type="text" class="input-field only-alpha" id="TextOnLogo" name="TextOnLogo" placeholder="Word To Appear On Logo">
+                                            <label class="label-field" for="TextOnLogo_LogoWeb">Text On Logo <span class="star">*</span></label>
+                                            <input type="text" class="input-field only-alpha" id="TextOnLogo_LogoWeb" name="TextOnLogo_LogoWeb" placeholder="Word To Appear On Logo">
                                             <span class="error-line">Enter Text On Logo</span>
                                         </div>
                                         <div class="col-md-6 field-wrap">
@@ -484,7 +490,7 @@
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="" class="label-field pb-12">Type Of Logo</label>
-                                            <div class="row row-gap-16">
+                                            <div class="row row-gap-16 logoWeb-type-of-logo">
                                                 <div class="col-md-6 col-lg-4">
                                                     <label class="form-check  md-card" for="logo10">
                                                         <div class=" d-flex justify-content-between">
@@ -621,10 +627,12 @@
                                                     </label>
                                                 </div>
                                             </div>
+                                            <span class="error-line">Enter Type Of Logo</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="" class="label-field pb-0 mb-20">Type Of Website &nbsp;*</label>
-                                            <div class="d-flex align-items-center justify-content-between cat-wrap">
+                                            <div class="logoWeb-type-of-website d-flex align-items-center justify-content-between cat-wrap">
                                                 <div class="form-check pr-15">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="webtype">
                                                     <label class="form-check-label e-light-gray label-field pb-0" for="webtype">
@@ -662,6 +670,8 @@
                                                     </label>
                                                 </div>
                                             </div>
+                                            <span class="error-line">Enter Type Of Website</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex justify-content-between align-items-sm-center flex-sm-row flex-column cat-wrap">
@@ -678,18 +688,23 @@
                                                 </div>
                                                 <input type="text" class="input-field websiteInput2" placeholder="Existing Website">
                                             </div>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="ColorPreference2" class="label-field">Color Preference</label>
                                             <input type="text" id="ColorPreference2" name="ColorPreference" class="input-field" placeholder="Color Preference (Optional)">
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Ideas_Inspiration" class="label-field ">Ideas & Inspiration <span class="star">*</span></label>
-                                            <textarea name="Ideas_Inspiration" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration" placeholder="Share if any reference in mind"></textarea>
+                                            <label for="Ideas_Inspiration_LogoWeb" class="label-field ">Ideas & Inspiration <span class="star">*</span></label>
+                                            <textarea name="Ideas_Inspiration_LogoWeb" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration_LogoWeb" placeholder="Share if any reference in mind"></textarea>
+                                            <span class="error-line">Enter Ideas & Inspiration</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Comments_instructions" class="label-field">Comments / Instructions <span class="star">*</span></label>
-                                            <textarea name="Comments_instructions" class="input-field textarea h-120" id="Comments_instructions" placeholder="Comments or any instructions"></textarea>
+                                            <label for="Comments_instructions_LogoWeb" class="label-field">Comments / Instructions <span class="star">*</span></label>
+                                            <textarea name="Comments_instructions_LogoWeb" class="input-field textarea h-120" id="Comments_instructions_LogoWeb" placeholder="Comments or any instructions"></textarea>
+                                            <span class="error-line">Enter Comments / Instructions</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex align-items-sm-center justify-content-between mb-6  flex-column flex-sm-row pb-sm-0 pb-8 align-items-start">
@@ -904,8 +919,8 @@
             let isValid = true;
 
             // Validate radio buttons
-            const logoRadioButtons = document.querySelectorAll('.logo-type-validate input[type="radio"]');
-            const logoErrorLine = document.querySelector('.logo-type-validate + .error-line');
+            const logoRadioButtons = document.querySelectorAll('#Logo-step .logo-type-validate input[type="radio"]');
+            const logoErrorLine = document.querySelector('#Logo-step .logo-type-validate + .error-line');
             const logoChecked = Array.from(logoRadioButtons).some(radio => radio.checked);
             if (!logoChecked) {
                 isValid = false;
@@ -917,7 +932,7 @@
             }
 
             // Validate text fields
-            const textFields = ['TextOnLogo', 'Ideas_Inspiration', 'Comments_instructions'];
+            const textFields = ['TextOnLogo', 'Ideas_InspirationLogo', 'Comments_instructionsLogo'];
             textFields.forEach(id => {
                 const input = document.getElementById(id);
                 if (!input.value.trim()) {
@@ -932,6 +947,88 @@
 
             return isValid;
         }
+
+        // Function to validate the web step
+        function validateWebStep() {
+            let isValid = true;
+
+            // Validate radio buttons
+            const webRadioButtons = document.querySelectorAll('#Web-step .type-of-site-web-step input[type="radio"]');
+            const webErrorLine = document.querySelector('#Web-step .type-of-site-web-step + .error-line');
+            const webChecked = Array.from(webRadioButtons).some(radio => radio.checked);
+            if (!webChecked) {
+                isValid = false;
+                webErrorLine.style.display = 'block';
+                webRadioButtons.forEach(radio => radio.classList.add('error-input'));
+            } else {
+                webRadioButtons.forEach(radio => radio.classList.remove('error-input'));
+                webErrorLine.style.display = 'none';
+            }
+
+            // Validate text fields
+            const textFields = ['Ideas_InspirationWeb', 'Comments_instructionsWeb'];
+            textFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error-input');
+                    input.nextElementSibling.style.display = 'block';
+                } else {
+                    input.classList.remove('error-input');
+                    input.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            return isValid;
+        }
+
+        // Function to validate the LogoWeb step
+        function validateLogoWebStep() {
+            let isValid = true;
+
+            // Validate Type Of Logo radio buttons
+            const logoWebRadioButtons = document.querySelectorAll('#LogoWeb-step .logoWeb-type-of-logo input[type="radio"]');
+            const logoWebErrorLine = document.querySelector('#LogoWeb-step .logoWeb-type-of-logo + .error-line');
+            const logoWebChecked = Array.from(logoWebRadioButtons).some(radio => radio.checked);
+            if (!logoWebChecked) {
+                isValid = false;
+                logoWebErrorLine.style.display = 'block';
+                logoWebRadioButtons.forEach(radio => radio.classList.add('error-input'));
+            } else {
+                logoWebRadioButtons.forEach(radio => radio.classList.remove('error-input'));
+                logoWebErrorLine.style.display = 'none';
+            }
+
+            // Validate Type Of Website radio buttons
+            const webTypeRadioButtons = document.querySelectorAll('#LogoWeb-step .logoWeb-type-of-website input[type="radio"]');
+            const webTypeErrorLine = document.querySelector('#LogoWeb-step .logoWeb-type-of-website + .error-line');
+            const webTypeChecked = Array.from(webTypeRadioButtons).some(radio => radio.checked);
+            if (!webTypeChecked) {
+                isValid = false;
+                webTypeErrorLine.style.display = 'block';
+                webTypeRadioButtons.forEach(radio => radio.classList.add('error-input'));
+            } else {
+                webTypeRadioButtons.forEach(radio => radio.classList.remove('error-input'));
+                webTypeErrorLine.style.display = 'none';
+            }
+
+            // Validate text fields
+            const textFields = ['Ideas_Inspiration_LogoWeb', 'TextOnLogo_LogoWeb', 'Comments_instructions_LogoWeb'];
+            textFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error-input');
+                    input.nextElementSibling.style.display = 'block';
+                } else {
+                    input.classList.remove('error-input');
+                    input.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            return isValid;
+        }
+
 
         // Function to handle the Next button click event
         function handleNextStepClick() {
@@ -969,15 +1066,27 @@
                     }
                 }
             } else if (currentStep.id === 'Web-step') {
-                // Example: Add validation for the 'Web-step' if needed
-                // if (validateWebStep()) {
-                //     currentStep.classList.add('d-none');
-                //     document.querySelector('.thankyou').classList.remove('d-none');
-                // }
+                if (validateWebStep()) {
+                    currentStep.classList.add('d-none');
+                    document.querySelector('.thankyou').classList.remove('d-none');
+                }
             } else if (currentStep.id === 'LogoWeb-step') {
-                // Handle the LogoWeb-step if needed
-                currentStep.classList.add('d-none');
-                document.querySelector('.thankyou').classList.remove('d-none');
+                if (validateLogoWebStep()) {
+                    currentStep.classList.add('d-none');
+                    document.querySelector('.thankyou').classList.remove('d-none');
+                }
+            }
+
+            // Update button type to submit if the next step is the last step
+            const allSteps = Array.from(document.querySelectorAll('.step-form-wrap'));
+            const lastStep = allSteps[allSteps.length - 1];
+            const nextButton = currentStep.querySelector('button.next-step');
+            if (nextButton) {
+                if (currentStep.id === lastStep.id) {
+                    nextButton.type = 'submit';
+                } else {
+                    nextButton.type = 'button'; // Ensure it's not a submit button
+                }
             }
         }
 
