@@ -20,6 +20,7 @@
         /* Hide error messages initially */
         color: red;
         font-size: 0.875em;
+        font-weight: 600;
     }
 
     .error-input {
@@ -177,6 +178,8 @@
                                         <div class="col-md-6 field-wrap">
                                             <label class="label-field" for="TextOnLogo">Text On Logo <span class="star">*</span></label>
                                             <input type="text" class="input-field only-alpha" id="TextOnLogo" name="TextOnLogo" placeholder="Word To Appear On Logo">
+                                            <span class="error-line">Enter Text On Logo</span>
+
                                         </div>
                                         <div class="col-md-6 field-wrap">
                                             <label for="Slogan" class="label-field">Slogan</label>
@@ -188,7 +191,7 @@
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="" class="label-field pb-12">Type Of Logo</label>
-                                            <div class="row row-gap-16">
+                                            <div class="row row-gap-16 logo-type-validate">
                                                 <div class="col-md-6 col-lg-4">
                                                     <label class="form-check  md-card" for="logo1">
                                                         <div class=" d-flex justify-content-between">
@@ -197,7 +200,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo1" checked>
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/1.png" alt="">
                                                             <img src="./assets/images/logos/2.png" alt="">
                                                             <img src="./assets/images/logos/3.png" alt="">
@@ -212,7 +215,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo2">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/4.png" alt="">
                                                             <img src="./assets/images/logos/5.png" alt="">
                                                             <img src="./assets/images/logos/6.png" alt="">
@@ -227,7 +230,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo3">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/7.png" alt="">
                                                             <img src="./assets/images/logos/8.png" alt="">
                                                             <img src="./assets/images/logos/9.png" alt="">
@@ -242,7 +245,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo4">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/10.png" alt="">
                                                             <img src="./assets/images/logos/11.png" alt="">
                                                             <img src="./assets/images/logos/12.png" alt="">
@@ -257,7 +260,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo5">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/13.png" alt="">
                                                             <img src="./assets/images/logos/14.png" alt="">
                                                             <img src="./assets/images/logos/15.png" alt="">
@@ -272,7 +275,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo6">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/16.png" alt="">
                                                             <img src="./assets/images/logos/17.png" alt="">
                                                             <img src="./assets/images/logos/18.png" alt="">
@@ -287,7 +290,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo7">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/19.png" alt="">
                                                             <img src="./assets/images/logos/20.png" alt="">
                                                             <img src="./assets/images/logos/21.png" alt="">
@@ -302,7 +305,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo8">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/22.png" alt="">
                                                             <img src="./assets/images/logos/23.png" alt="">
                                                             <img src="./assets/images/logos/24.png" alt="">
@@ -317,7 +320,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo9">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/25.png" alt="">
                                                             <img src="./assets/images/logos/26.png" alt="">
                                                             <img src="./assets/images/logos/27.png" alt="">
@@ -325,14 +328,20 @@
                                                     </label>
                                                 </div>
                                             </div>
+                                            <span class="error-line">Select Type Of Logo</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Ideas_Inspiration" class="label-field ">Ideas & Inspiration <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration" placeholder="Share if any reference in mind"></textarea>
+                                            <label for="Ideas_InspirationLogo" class="label-field ">Ideas & Inspiration <span class="star">*</span></label>
+                                            <textarea name="Ideas_InspirationLogo" class="input-field textarea h-md only-alpha" id="Ideas_InspirationLogo" placeholder="Share if any reference in mind"></textarea>
+                                            <span class="error-line">Enter Ideas & Inspiration</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
-                                            <label for="Comments_instructions" class="label-field">Comments / Instructions <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-120" id="Comments_instructions" placeholder="Comments or any instructions"></textarea>
+                                            <label for="Comments_instructionsLogo" class="label-field">Comments / Instructions <span class="star">*</span></label>
+                                            <textarea name="Comments_instructionsLogo" class="input-field textarea h-120" id="Comments_instructionsLogo" placeholder="Comments or any instructions"></textarea>
+                                            <span class="error-line">Enter Comments / Instructions</span>
+
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex align-items-sm-center justify-content-between mb-6  flex-column flex-sm-row pb-sm-0 pb-8 align-items-start ">
@@ -467,6 +476,7 @@
                                         <div class="col-md-6 field-wrap">
                                             <label class="label-field" for="TextOnLogo">Text On Logo <span class="star">*</span></label>
                                             <input type="text" class="input-field only-alpha" id="TextOnLogo" name="TextOnLogo" placeholder="Word To Appear On Logo">
+                                            <span class="error-line">Enter Text On Logo</span>
                                         </div>
                                         <div class="col-md-6 field-wrap">
                                             <label for="Slogan" class="label-field">Slogan</label>
@@ -483,7 +493,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo10">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/1.png" alt="">
                                                             <img src="./assets/images/logos/2.png" alt="">
                                                             <img src="./assets/images/logos/3.png" alt="">
@@ -498,7 +508,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo11">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/4.png" alt="">
                                                             <img src="./assets/images/logos/5.png" alt="">
                                                             <img src="./assets/images/logos/6.png" alt="">
@@ -513,7 +523,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo12">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/7.png" alt="">
                                                             <img src="./assets/images/logos/8.png" alt="">
                                                             <img src="./assets/images/logos/9.png" alt="">
@@ -528,7 +538,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo13">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/10.png" alt="">
                                                             <img src="./assets/images/logos/11.png" alt="">
                                                             <img src="./assets/images/logos/12.png" alt="">
@@ -543,7 +553,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo14">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/13.png" alt="">
                                                             <img src="./assets/images/logos/14.png" alt="">
                                                             <img src="./assets/images/logos/15.png" alt="">
@@ -558,7 +568,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo15">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/16.png" alt="">
                                                             <img src="./assets/images/logos/17.png" alt="">
                                                             <img src="./assets/images/logos/18.png" alt="">
@@ -573,7 +583,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo16">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/19.png" alt="">
                                                             <img src="./assets/images/logos/20.png" alt="">
                                                             <img src="./assets/images/logos/21.png" alt="">
@@ -588,7 +598,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo17">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/22.png" alt="">
                                                             <img src="./assets/images/logos/23.png" alt="">
                                                             <img src="./assets/images/logos/24.png" alt="">
@@ -603,7 +613,7 @@
                                                             </h4>
                                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="logo18">
                                                         </div>
-                                                        <div class="d-flex justify-content-between">
+                                                        <div class="d-flex justify-content-between gap-4">
                                                             <img src="./assets/images/logos/25.png" alt="">
                                                             <img src="./assets/images/logos/26.png" alt="">
                                                             <img src="./assets/images/logos/27.png" alt="">
@@ -675,11 +685,11 @@
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="Ideas_Inspiration" class="label-field ">Ideas & Inspiration <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration" placeholder="Share if any reference in mind"></textarea>
+                                            <textarea name="Ideas_Inspiration" class="input-field textarea h-md only-alpha" id="Ideas_Inspiration" placeholder="Share if any reference in mind"></textarea>
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <label for="Comments_instructions" class="label-field">Comments / Instructions <span class="star">*</span></label>
-                                            <textarea name="textarea" class="input-field textarea h-120" id="Comments_instructions" placeholder="Comments or any instructions"></textarea>
+                                            <textarea name="Comments_instructions" class="input-field textarea h-120" id="Comments_instructions" placeholder="Comments or any instructions"></textarea>
                                         </div>
                                         <div class="col-md-12 field-wrap">
                                             <div class="d-flex align-items-sm-center justify-content-between mb-6  flex-column flex-sm-row pb-sm-0 pb-8 align-items-start">
@@ -723,7 +733,7 @@
 <script src="./assets/js/cleave.min.js"></script>
 <script src="./assets/js/custom.js"></script>
 <!-- working js -->
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Function to check if all required fields are filled
         function validateForm() {
@@ -833,6 +843,150 @@
                     }
                 }
             }
+        });
+    });
+</script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to validate the initial step
+        function validateInitialStep() {
+            let isValid = true;
+            const requiredFields = ['BusinessTitle', 'ServiceIndustry', 'BusinessContactPerson', 'BusinessPhone', 'BusinessEmail', 'textarea'];
+
+            requiredFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error-input');
+                    input.nextElementSibling.style.display = 'block';
+                } else {
+                    input.classList.remove('error-input');
+                    input.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            // Check phone number format
+            const phoneInput = document.getElementById('BusinessPhone');
+            const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+            if (phoneInput.value && !phonePattern.test(phoneInput.value)) {
+                isValid = false;
+                phoneInput.classList.add('error-input');
+                phoneInput.nextElementSibling.style.display = 'block';
+            }
+
+            // Check radio buttons
+            const radioButtons = document.querySelectorAll('.business-type input[type="radio"]');
+            const radioChecked = Array.from(radioButtons).some(radio => radio.checked);
+            if (!radioChecked) {
+                isValid = false;
+                document.querySelector('.business-type .error-line').style.display = 'block';
+                radioButtons.forEach(radio => radio.classList.add('error-input'));
+            } else {
+                radioButtons.forEach(radio => radio.classList.remove('error-input'));
+                document.querySelector('.business-type .error-line').style.display = 'none';
+            }
+
+            // Check checkboxes
+            const checkboxes = document.querySelectorAll('#first-step-checks input[type="checkbox"]');
+            const checkboxChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            if (!checkboxChecked) {
+                isValid = false;
+                document.querySelector('#first-step-checks + .error-line').style.display = 'block';
+            } else {
+                document.querySelector('#first-step-checks + .error-line').style.display = 'none';
+            }
+
+            return isValid;
+        }
+
+        // Function to validate the logo step
+        function validateLogoStep() {
+            let isValid = true;
+
+            // Validate radio buttons
+            const logoRadioButtons = document.querySelectorAll('.logo-type-validate input[type="radio"]');
+            const logoErrorLine = document.querySelector('.logo-type-validate + .error-line');
+            const logoChecked = Array.from(logoRadioButtons).some(radio => radio.checked);
+            if (!logoChecked) {
+                isValid = false;
+                logoErrorLine.style.display = 'block';
+                logoRadioButtons.forEach(radio => radio.classList.add('error-input'));
+            } else {
+                logoRadioButtons.forEach(radio => radio.classList.remove('error-input'));
+                logoErrorLine.style.display = 'none';
+            }
+
+            // Validate text fields
+            const textFields = ['TextOnLogo', 'Ideas_Inspiration', 'Comments_instructions'];
+            textFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error-input');
+                    input.nextElementSibling.style.display = 'block';
+                } else {
+                    input.classList.remove('error-input');
+                    input.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            return isValid;
+        }
+
+        // Function to handle the Next button click event
+        function handleNextStepClick() {
+            const currentStep = document.querySelector('.step-form-wrap:not(.d-none)');
+            const nextStep = currentStep.nextElementSibling;
+
+            if (currentStep.id === 'initial-step') {
+                if (validateInitialStep()) {
+                    const isLogoChecked = document.getElementById('LogoCheck').checked;
+                    const isWebChecked = document.getElementById('WebCheck').checked;
+
+                    // Determine the next step based on checkbox selection
+                    if (isLogoChecked && isWebChecked) {
+                        // Show LogoWeb-step if both are checked
+                        document.getElementById('LogoWeb-step').classList.remove('d-none');
+                    } else {
+                        // Show Logo-step or Web-step based on the checks
+                        if (isLogoChecked) {
+                            document.getElementById('Logo-step').classList.remove('d-none');
+                        }
+                        if (isWebChecked) {
+                            document.getElementById('Web-step').classList.remove('d-none');
+                        }
+                    }
+
+                    // Hide current step and move to the determined step
+                    currentStep.classList.add('d-none');
+                }
+            } else if (currentStep.id === 'logo-step') {
+                if (validateLogoStep()) {
+                    currentStep.classList.add('d-none');
+                    if (document.getElementById('Web-step').classList.contains('d-none')) {
+                        // If Web-step is not visible, show the Thank You section
+                        document.querySelector('.thankyou').classList.remove('d-none');
+                    }
+                }
+            } else if (currentStep.id === 'Web-step') {
+                // Example: Add validation for the 'Web-step' if needed
+                // if (validateWebStep()) {
+                //     currentStep.classList.add('d-none');
+                //     document.querySelector('.thankyou').classList.remove('d-none');
+                // }
+            } else if (currentStep.id === 'LogoWeb-step') {
+                // Handle the LogoWeb-step if needed
+                currentStep.classList.add('d-none');
+                document.querySelector('.thankyou').classList.remove('d-none');
+            }
+        }
+
+        // Attach the click event listener to all Next buttons
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                handleNextStepClick();
+            });
         });
     });
 </script>
