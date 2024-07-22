@@ -1,65 +1,68 @@
+//Step Form Functionality working perfectly without validation
+// document.addEventListener("DOMContentLoaded", function () {
+//   const form = document.querySelector(".step-form");
+//   const initialStep = document.getElementById("initial-step");
+//   const logoStep = document.getElementById("Logo-step");
+//   const webStep = document.getElementById("Web-step");
+//   const brandStep = document.getElementById("Brand-step");
+//   const logoWebStep = document.getElementById("LogoWeb-step");
+//   const thankYouSection = document.querySelector(".thankyou");
 
-//Step Form Functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const initialForm = document.querySelector("#initial-step form");
-  const initialStep = document.getElementById("initial-step");
-  const logoStep = document.getElementById("Logo-step");
-  const webStep = document.getElementById("Web-step");
-  const logoWebStep = document.getElementById("LogoWeb-step");
-  const thankYouSection = document.querySelector(".thankyou");
+//   const steps = [];
+//   let currentStepIndex = 0;
 
-  const steps = [];
-  let currentStepIndex = 0;
+//   initialStep
+//     .querySelector("button.next-step")
+//     .addEventListener("click", function (e) {
+//       e.preventDefault();
+//       steps.length = 0;
 
-  initialForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    steps.length = 0;
+//       const isLogoChecked = document.getElementById("LogoCheck").checked;
+//       const isWebChecked = document.getElementById("WebCheck").checked;
+//       const isBrandChecked = document.getElementById("BrandCheck").checked;
 
-    const isLogoChecked = document.getElementById("LogoCheck").checked;
-    const isWebChecked = document.getElementById("WebCheck").checked;
-    const isBrandChecked = document.getElementById("BrandCheck").checked;
+//       if (isLogoChecked && isWebChecked) {
+//         steps.push(logoWebStep);
+//       } else {
+//         if (isLogoChecked) {
+//           steps.push(logoStep);
+//         }
+//         if (isWebChecked) {
+//           steps.push(webStep);
+//         }
+//       }
 
-    if (isLogoChecked && isWebChecked) {
-      steps.push(logoWebStep);
-    } else {
-      if (isLogoChecked) {
-        steps.push(logoStep);
-      }
-      if (isWebChecked) {
-        steps.push(webStep);
-      }
-    }
+//       if (isBrandChecked) {
+//         steps.push(brandStep);
+//       }
 
-    if (isBrandChecked) {
-      steps.push(brandStep);
-    }
+//       if (steps.length > 0) {
+//         initialStep.classList.add("d-none");
+//         showStep(0);
+//       }
+//     });
 
-    if (steps.length > 0) {
-      initialStep.classList.add("d-none");
-      showStep(0);
-    }
-  });
+//   function showStep(index) {
+//     if (index < steps.length) {
+//       steps[index].classList.remove("d-none");
+//       const nextButton = steps[index].querySelector("button.next-step");
+//       if (index === steps.length - 1) {
+//         nextButton.type = "submit";
+//         nextButton.textContent = "Submit";
+//       } else {
+//         nextButton.addEventListener("click", function (e) {
+//           e.preventDefault();
+//           steps[index].classList.add("d-none");
+//           showStep(index + 1);
+//         });
+//       }
+//     } else {
+//       thankYouSection.classList.remove("d-none");
+//     }
+//   }
+// });
 
-  function showStep(index) {
-    if (index < steps.length) {
-        steps[index].classList.remove("d-none");
-        steps[index]
-          .querySelector("form")
-          .addEventListener("submit", function (e) {
-            e.preventDefault();
-            steps[index].classList.add("d-none");
-            showStep(index + 1);
-          });
-      } else {
-        thankYouSection.classList.remove("d-none");
-        // Uncomment the next line to redirect to a thank you page instead of showing the thank you section
-        // window.location.href = 'thankyou.html';
-      }
-    }
-  });
-
-
-// Input Toggle Website 
+// Input Toggle Website
 const websiteInput = document.querySelector(".websiteInput");
 const radioButtons = document.querySelectorAll(
   '.input-toggle input[type="radio"]'
@@ -90,8 +93,6 @@ radioButtons2.forEach((radioButton) => {
     }
   });
 });
-
-
 
 // file upload
 const fileUpload = (event, imageId, iconId) => {
